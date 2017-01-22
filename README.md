@@ -1,2 +1,2 @@
-# sequelizedBurger
-Another twist to the Burger App with the usage of the technology, Sequelize.
+# burger-restaurant
+A simple app that demonstrates the usage of Node.js, mySQL, Mustache.js, Handlebars, and API methods to imitate a burger restaurant

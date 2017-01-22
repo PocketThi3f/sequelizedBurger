@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("/assets/images/food.png");
+}
+
+.burgerImg {
+	width: 250px;
+	height: 250px;
+	margin-left: 425px;
+}
+
+.welcomeM {
+	font-family: 'VT323', monospace;
+	text-align: center;
+}
+
+.askOrder {
+	font-family: 'VT323', monospace;
+	text-align: center;
+}
+
+.mealT {
+	font-family: 'Architects Daughter', cursive;
+	margin-left: 350px;
+}
+
