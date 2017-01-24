@@ -1,12 +1,12 @@
 // Here are all the functions that will route the app
 var express = require("express");
-
 var router = express.Router();
+var db = require("../models");
 
-var burger = require("../models/burger.js");
-
+// Change the function names to the standard practice of Sequelize documentation
+// First off, using findAll
 router.get("/", function(req, res) {
-	burger.selectAll(function(data) {
+	db.burger.findAll(function(data) {
 		var hbsObject = { 
 			burgers: data 
 		};
@@ -15,8 +15,10 @@ router.get("/", function(req, res) {
 	});
 });
 
+// Secondly, create function
 router.post("/", function(req, res) {
-	burger.insertOne([
+	
+db.burger.create([
 		"burger_name"
 	], [
 		req.body.burger_name
@@ -25,24 +27,24 @@ router.post("/", function(req, res) {
 	});
 });
 
+// Update function from sequelize
 router.put("/:ID", function(req, res) {
-	var condition = "ID = " + req.params.ID;
 
-	console.log("condition", condition);
-
-	burger.updateOne({ 
+db.burger.update({ 
 		devoured: req.body.devoured 
 	}, condition, function() {
 		res.redirect("/");
 	});
 });
 
+// Lastly, destroy or remove function
 router.delete("/:ID", function(req, res) {
-	var condition = "ID = " + req.body.ID;
 
-	burger.deleteOne(condition, function() {
-		res.redirect("/");
-	});
-});
+db.burger.destroy({
+	where: {
+		req.body.ID
+	}
+	}).then(function(err, results) {
+		
 
 module.exports = router;
