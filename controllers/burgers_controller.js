@@ -23,8 +23,7 @@ router.get("/", function(req, res) {
 router.post("/", function(req, res) {
 	
 db.Burger.create({
-		burger_name: req.body.burger_name,
-		devoured: 0
+		burger_name: req.body.burger_name
 	}).then(function(data) {
 
 		var hbsObject = {
