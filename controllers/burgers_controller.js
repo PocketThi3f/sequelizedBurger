@@ -39,7 +39,7 @@ db.Burger.create({
 router.put("/:id", function(req, res) {
 
 db.Burger.update({ 
-		devoured: 1
+		devoured: req.params.id
 	}, {
 		where: {
 			id: req.params.id
