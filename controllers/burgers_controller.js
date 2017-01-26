@@ -6,6 +6,7 @@ var db = require("../models");
 // Change the function names to the standard practice of Sequelize documentation
 // First off, using findAll
 router.get("/", function(req, res) {
+<<<<<<< HEAD
 	db.Burger.findAll({}).then(function(data) {
 
 		var hbsObject = { 
@@ -16,11 +17,29 @@ router.get("/", function(req, res) {
 
 		res.render("index", hbsObject);
 	});
+=======
+	
+db.burger.findAll({
+	
+}).then(function(data) {
+		
+	var hbsObject = { 
+		
+		burgers: data 
+	};
+		
+	//console.log(hbsObject);
+	
+	res.render("index", hbsObject);
+		
+  });
+>>>>>>> b150048407faca65c7ecd0c59d8457a6940c2311
 });
 
 // Secondly, create function
 router.post("/", function(req, res) {
 	
+<<<<<<< HEAD
 db.Burger.create({
 		burger_name: req.body.burger_name,
 		devoured: false
@@ -32,6 +51,23 @@ db.Burger.create({
 
 		res.redirect("/");
 	});
+=======
+	var burgerItem = req.body.burger_name;
+	
+db.burger.create({
+	
+	burger_name: burgerItem,
+	devoured: false
+	
+}).then(function(data) {
+	
+	res.redirect("/");
+	
+}).catch(function(err) {
+	
+	res.send(err);
+	
+>>>>>>> b150048407faca65c7ecd0c59d8457a6940c2311
 });
 
 // Update function from sequelize
