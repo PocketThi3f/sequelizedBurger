@@ -36,13 +36,13 @@ db.Burger.create({
 });
 
 // Update function from sequelize
-router.put("/:ID", function(req, res) {
+router.put("/:id", function(req, res) {
 
 db.Burger.update({ 
 		devoured: req.params.devoured 
 	}, {
 		where: {
-			ID: req.params.ID
+			id: req.params.id
 		}
 	}).then(function(data) {
 		res.redirect("/");
@@ -50,11 +50,11 @@ db.Burger.update({
 });
 
 // Lastly, destroy or remove function for IDs
-router.delete("/:ID", function(req, res) {
+router.delete("/:id", function(req, res) {
 
 db.Burger.destroy({
 	where: {
-		ID: req.params.ID
+		id: req.params.id
 	}
 	}).then(function(data) {
 		res.redirect("/");
