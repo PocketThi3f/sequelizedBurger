@@ -1,32 +1,29 @@
 {
-  "name": "burger-restaurant",
+  "name": "sequelized-burger",
   "version": "1.0.0",
-  "description": "App that adds burgers",
+  "description": "App that continues its predecessor",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.29.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PocketThi3f/burger-restaurant.git"
+    "url": "git+https://github.com/PocketThi3f/sequelizedBurger.git"
   },
-  "author": "Kris",
+  "author": "Kris L",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PocketThi3f/burger-restaurant/issues"
+    "url": "https://github.com/PocketThi3f/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/PocketThi3f/burger-restaurant#readme",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "express-handlebars": "^3.0.0",
-    "method-override": "^2.3.7",
-    "mysql": "^2.12.0",
-    "sequelize": "^3.29.0"
-  },
-  "engines": {
-    "node": "6.9.4"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/PocketThi3f/sequelizedBurger#readme"
 }
