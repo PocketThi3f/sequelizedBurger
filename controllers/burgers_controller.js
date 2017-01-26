@@ -24,7 +24,7 @@ router.post("/", function(req, res) {
 	
 db.Burger.create({
 		burger_name: req.body.burger_name,
-		devoured: true
+		devoured: 0
 	}).then(function(data) {
 
 		var hbsObject = {
@@ -39,7 +39,7 @@ db.Burger.create({
 router.put("/:id", function(req, res) {
 
 db.Burger.update({ 
-		devoured: req.params.devoured 
+		devoured: 1
 	}, {
 		where: {
 			id: req.params.id
