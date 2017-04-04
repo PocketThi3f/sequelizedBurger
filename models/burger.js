@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Datatypes) {
 	var Burger = sequelize.define("Burger", {
-    burger_name: {
+    burger_name: { 
     	type: Datatypes.STRING,
     	allowNull: false,
     	validate: {
@@ -13,6 +13,13 @@ module.exports = function(sequelize, Datatypes) {
     }
   }, {
         timestamps: false
+    },
+    {
+        classMethods: {
+            associate: function(models) {
+                Burger.hasOne(models.Customer);
+            }
+        }
     });
   return Burger;
 }

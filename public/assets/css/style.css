@@ -9,8 +9,17 @@ body {
 .burgerImg {
 	width: 250px;
 	height: 250px;
-	margin-left: 425px;
+	margin-left: 900px;
 	border-radius: 20px;
+}
+
+#burgerDecal {
+	background-image: url("/assets/images/that-is-tasty-indeed.gif");
+	background-size: 1150px 250px;
+	background-repeat: no-repeat;
+	background-color: white;
+	border-radius: 50px;
+	max-width: 100%;
 }
 
 .welcomeM {
