@@ -1,8 +1,7 @@
 <div class="container">
-
-	<h1 class="welcomeM">Welcome To Eat-Da-Burger Joint!</h1>
+	<h1 class="welcomeM closedRegi">Welcome To Eat-Da-Burger Joint!</h1>
 	
-		<h2 class="askOrder">Order Up! Ready to Serve.</h2>
+		<h2 class="askOrder goodEat">Order Up! Ready to Serve.</h2>
 		
 		<div id="burgerDecal">
 
@@ -10,6 +9,7 @@
 
 		</div>	
 
+	<div class="closedRegi">
 		<ol>
 			{{#each burgers}}
 				{{#unless devoured}}
@@ -26,11 +26,10 @@
 				{{/unless}}	
 			{{/each}}
 		</ol>
-	
+	</div>
 
-	
+	<div class="closedRegi">
 		<h2 class="askOrder">Burgers Devoured So Far:</h2>
-
 		<ol>
 			{{#each burgers}}
 				{{#if devoured}}
@@ -47,9 +46,9 @@
 				{{/if}}
 			{{/each}}	
 		</ol>
+	</div>
 
-
-	
+	<div class="closedRegi">
 		<h2 class="askOrder">Order A New Burger</h2>
 
 		<form class="create-update-form" action="/" method="POST">
@@ -62,4 +61,5 @@
 
 			<button type="submit" class="btn-danger mealT"><i class="fa fa-bell" aria-hidden="true"></i> Ready To Order</button>
 		</form>
+	</div>	
 </div>	

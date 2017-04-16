@@ -6,11 +6,19 @@ body {
 	background-image: url("/assets/images/food.png");
 }
 
+.closedRegi {
+	border: black dashed 2px;
+}
+
+.goodEat {
+	border: black solid 2px;
+}
+
 .burgerImg {
 	width: 250px;
 	height: 250px;
-	margin-left: 900px;
-	border-radius: 20px;
+	margin-left: 450px;
+	border-radius: 80px;
 }
 
 .welcomeM {
